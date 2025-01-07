@@ -1,0 +1,16 @@
+<div class="card" style="width: 18rem;">
+    
+    <div class="card-body">
+      <h5 class="card-title">Sign in</h5>
+      <div class="form-floating mb-3">
+        <input [(ngModel)]="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input [(ngModel)]="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+      <button (click)="signIn()" type="button" class=" my-3 btn btn-primary">Sign in</button>
+      <button (click)="secretData()" type="button" class=" my-3 btn btn-primary">Get secret</button>
+    </div>
+  </div>
