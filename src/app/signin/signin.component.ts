@@ -22,4 +22,16 @@ export class SigninComponent {
     this.auth.getSecret()
   }
 
+  getAllUsers(){
+    this.auth.getAllUser()
+  }
+
+  updateUser(){
+    this.auth.updateUser()
+  }
+
+  sadmin(){
+    this.auth.sadmin()
+  }
+
 }

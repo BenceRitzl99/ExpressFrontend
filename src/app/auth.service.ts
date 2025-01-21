@@ -15,6 +15,32 @@ export class AuthService {
   constructor(private http:HttpClient) { }
 
 
+  updateUser(){
+    const body:any = {}
+    body["profilePicture"]="kep.jpg"
+    body.userName="Szilveszter"
+    this.http.patch(this.api+"update-profile", body, this.httpOptions).subscribe(
+      (res)=>console.log(res)
+    )
+  }
+  sadmin(){
+    const body:any = {}
+    
+    body.sadmin=1
+    body.admin=1
+  
+    this.http.patch(this.api+"sadmin-update-profile/3", body, this.httpOptions).subscribe(
+      (res)=>console.log(res)
+    )
+  }
+
+  getAllUser(){
+    this.http.get(this.api+"all-users",  this.httpOptions).subscribe(
+      (res)=>console.log(res)
+    )
+  }
+
+
   getLoggedUser(){
     return this.userSub
   }
